@@ -1,4 +1,8 @@
-export default function WeatherCard({city,weather}){
+import { useContext } from "react";
+import { hello } from "../context/context";
+
+export default function WeatherCard(){
+  const {city,weather} = useContext(hello)
     if (!weather) {
     return (
       <div className="flex justify-center mt-10 text-xl text-red-600">
